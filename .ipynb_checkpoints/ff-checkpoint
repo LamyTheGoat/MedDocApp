@@ -1,0 +1,132 @@
+# 3.1: Create data addition form window
+def patient_edit_form_window(tree, selected):
+    add_patient = Tk()
+    add_patient.resizable(height = False, width = False)
+    add_patient.geometry("520x800")
+    add_patient.title("Hasta Ekleme Formu")
+
+
+    heading= Label(add_patient,text='Hasta Ekleme Formu', bg='grey', fg="white", width="500", height="3")
+    heading.pack()
+
+    values= tree.item(selected)['values']
+
+
+
+
+    date_text       = Label(add_patient, text='Tarih ')
+    firstname_text  = Label(add_patient, text='İsim ')
+    lastname_text   = Label(add_patient, text='Soyisim ')
+    age_text        = Label(add_patient, text='Yaş ')
+    sex_text        = Label(add_patient, text='Cinsiyeti')
+    tel_text        = Label(add_patient, text='Cep Telefonu')
+    tc_text         = Label(add_patient, text='TC No')
+    adress_text     = Label(add_patient, text='Adres')
+    complain_text   = Label(add_patient, text='Yakınma')
+    inspection_text = Label(add_patient, text='Fizik Muayene')
+    plan_text       = Label(add_patient, text='Plan')
+
+
+    date_text.place(x=10, y=60)
+    firstname_text.place(x=10, y=100)
+    lastname_text.place(x=250, y=100)
+    age_text.place(x=10, y=140)
+    sex_text.place(x=250, y=140)
+    tel_text.place(x=10, y=180)
+    tc_text.place(x=250, y=180)
+    adress_text.place(x=10, y=220)
+    complain_text.place(x=10, y=320)
+    inspection_text.place(x=10, y=500)
+    plan_text.place(x=10, y=600)
+
+
+
+
+
+
+    date       = StringVar()
+    firstname  = StringVar()
+    lastname   = StringVar()
+    age        = StringVar()
+    sex        = StringVar()
+    tel        = StringVar()
+    tc         = StringVar()
+    adress     = StringVar()
+    complain   = StringVar()
+    inspection = StringVar()
+    plan       = StringVar()
+
+
+    date_entry       = Entry(add_patient, textvariable= date)
+    firstname_entry  = Entry(add_patient, textvariable= firstname)
+    lastname_entry   = Entry(add_patient, textvariable= lastname)
+    age_entry        = Entry(add_patient, textvariable= age)
+    sex_entry        = Entry(add_patient, textvariable= sex)
+    tel_entry        = Entry(add_patient, textvariable= tel)
+    tc_entry         = Entry(add_patient, textvariable= tc)
+    adress_entry     = Text(add_patient)
+    complain_entry   = Text(add_patient)
+    inspection_entry = Text(add_patient)
+    plan_entry       = Text(add_patient)
+
+
+    date_entry.insert(0, values[0])
+    firstname_entry.insert(0, values[1])
+    lastname_entry.insert(0, values[2])
+    age_entry.insert(0, values[3])
+    sex_entry.insert(0, values[4])
+    tel_entry.insert(0, values[5])
+    tc_entry.insert(0, values[6])
+    adress_entry.insert(1.0, values[7])
+    complain_entry.insert(1.0, values[8])
+    inspection_entry.insert(1.0, values[9])
+    plan_entry.insert(1.0, values[10])
+
+
+
+    date_entry.place(x=100, y=60, width="130", height="20")
+    firstname_entry.place(x=100, y=100, width="130", height="20")
+    lastname_entry.place(x=310, y=100, width="130",height="20")
+    age_entry.place(x=100, y=140, width="130", height="20")
+    sex_entry.place(x=310,y=140, width="130", height="20")
+    tel_entry.place(x=100, y=180, width="130", height="20")
+    tc_entry.place(x=310, y=180, width="130", height="20")
+    adress_entry.place(x=100, y=220, width="400", height="80")
+    complain_entry.place(x=100, y=320, width="400", height="160")
+    inspection_entry.place(x=100, y=500, width="400", height="80")
+    plan_entry.place(x=100, y=600, width="400", height="60")
+
+
+    def edit_patient():
+        date = date_entry.get()
+        firstname = firstname_entry.get()
+        lastname = lastname_entry.get()
+        age = age_entry.get()
+        sex = sex_entry.get()
+        tel = tel_entry.get()
+        tc = tc_entry.get()
+        adress = adress_entry.get(1.0,END)
+        complain = complain_entry.get(1.0,END)
+        inspection = inspection_entry.get(1.0,END)
+        plan = plan_entry.get(1.0,END)
+
+        row=createElement(
+        date,
+        firstname,
+        lastname,
+        age,
+        sex,
+        tel,
+        tc,
+        adress,
+        complain,
+        inspection,
+        plan
+        )
+        ##addElement(row, file_data)
+        tree.item(selected, values=(row[0]))
+
+
+    reg_button= Button(add_patient, text="Hastayı Kaydet", command = edit_patient, bg='orange', width="30")
+    reg_button.place(x="155", y="700", height="30")
+    add_patient.mainloop()

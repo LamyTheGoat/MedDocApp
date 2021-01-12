@@ -1,0 +1,11 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "C:\\Users\\TULPAR",
+  "password": false,
+  "pid": 10080,
+  "port": 8888,
+  "secure": false,
+  "token": "03fa9e84a41006a8be02953c9161b6ee3a1151db4c6d3e2d",
+  "url": "http://localhost:8888/"
+}

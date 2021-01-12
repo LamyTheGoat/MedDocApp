@@ -1,0 +1,283 @@
+    
+    ##Bold Text Function
+    def bold_text():
+        bold_font = font.Font(complain_entry, complain_entry.cget("font"))
+        bold_font.configure(weight="bold")
+        
+        #Configure a tag
+        complain_entry.tag_configure("bold", font=bold_font)
+        
+        try:
+            #Define current tags
+            current_tags = complain_entry.tag_names("sel.first")
+
+            if "bold" in current_tags:
+                complain_entry.tag_remove("bold", "sel.first", "sel.last")
+            else:
+                complain_entry.tag_add("bold", "sel.first", "sel.last")
+                
+                
+            return;
+        except:
+            pass
+        
+        bold_font_i = font.Font(inspection_entry, inspection_entry.cget("font"))
+        bold_font_i.configure(weight="bold")
+        
+        #Configure a tag
+        inspection_entry.tag_configure("bold", font=bold_font_i)
+        
+        try:
+            #Define current tags
+            current_tags_i = inspection_entry.tag_names("sel.first")
+
+            if "bold" in current_tags_i:
+                inspection_entry.tag_remove("bold", "sel.first", "sel.last")
+            else:
+                inspection_entry.tag_add("bold", "sel.first", "sel.last")
+                
+                
+            return;
+        except:
+            pass
+        
+        bold_font_p = font.Font(plan_entry, plan_entry.cget("font"))
+        bold_font_p.configure(weight="bold")
+        
+        #Configure a tag
+        plan_entry.tag_configure("bold", font=bold_font_p)
+        
+        try:
+            #Define current tags
+            current_tags_p = plan_entry.tag_names("sel.first")
+
+            if "bold" in current_tags_p:
+                plan_entry.tag_remove("bold", "sel.first", "sel.last")
+            else:
+                plan_entry.tag_add("bold", "sel.first", "sel.last")
+                
+                
+            return;
+        except:
+            pass
+        
+        
+    ##End of Bold Text Function
+        
+    ##Italic Text
+    def italic_text():
+        italic_font_c = font.Font(complain_entry, complain_entry.cget("font"))
+        italic_font_c.configure(slant="italic")
+        
+        #Configure a tag
+        complain_entry.tag_configure("italic", font=italic_font_c)
+        
+        try:
+            #Define current tags
+            current_tags_c = complain_entry.tag_names("sel.first")
+
+            if "italic" in current_tags_c:
+                complain_entry.tag_remove("italic", "sel.first", "sel.last")
+            else:
+                complain_entry.tag_add("italic", "sel.first", "sel.last")
+            
+            return;
+        except:
+            pass
+        
+        
+        
+        italic_font_i = font.Font(inspection_entry, inspection_entry.cget("font"))
+        italic_font_i.configure(slant="italic")
+        
+        #Configure a tag
+        inspection_entry.tag_configure("italic", font=italic_font_i)
+        
+        try:
+            #Define current tags
+            current_tags_i = inspection_entry.tag_names("sel.first")
+
+            if "italic" in current_tags_i:
+                inspection_entry.tag_remove("italic", "sel.first", "sel.last")
+            else:
+                inspection_entry.tag_add("italic", "sel.first", "sel.last")
+                
+            return;
+        except:
+            pass
+        
+        italic_font_p = font.Font(plan_entry, plan_entry.cget("font"))
+        italic_font_p.configure(slant="italic")
+        
+        #Configure a tag
+        plan_entry.tag_configure("italic", font=italic_font_p)
+        
+        try:
+            #Define current tags
+            current_tags_p = plan_entry.tag_names("sel.first")
+
+            if "italic" in current_tags_p:
+                plan_entry.tag_remove("italic", "sel.first", "sel.last")
+            else:
+                plan_entry.tag_add("italic", "sel.first", "sel.last")
+                
+            return;
+        except:
+            pass
+    ##End of Italic Text Function
+        
+    
+    ##BUTTONS FOR RT EDIT
+    toolbar = Frame(add_patient)
+    toolbar.place(x=110,y=280);
+    
+    bold_button = Button(toolbar, text="B", command = bold_text, width=2)
+    bold_button.grid(row=0, column=0, padx=5)
+    italic_button = Button(toolbar, text="I", command = italic_text, width=2)
+    italic_button.grid(row=0, column=1, padx=5)
+    
+___________________________________________________________________________________________________________________________
+###########################################################################################################################
+---------------------------------------------------------------------------------------------------------------------------
+###########################################################################################################################
+___________________________________________________________________________________________________________________________
+
+    
+    ##Bold Text Function
+    def bold_text():
+        bold_font = font.Font(complain_entry, complain_entry.cget("font"))
+        bold_font.configure(weight="bold")
+        
+        #Configure a tag
+        complain_entry.tag_configure("bold", font=bold_font)
+        
+        try:
+            #Define current tags
+            current_tags = complain_entry.tag_names("sel.first")
+
+            if "bold" in current_tags:
+                complain_entry.tag_remove("bold", "sel.first", "sel.last")
+            else:
+                complain_entry.tag_add("bold", "sel.first", "sel.last")
+                
+                
+            return;
+        except:
+            pass
+        
+        bold_font_i = font.Font(inspection_entry, inspection_entry.cget("font"))
+        bold_font_i.configure(weight="bold")
+        
+        #Configure a tag
+        inspection_entry.tag_configure("bold", font=bold_font_i)
+        
+        try:
+            #Define current tags
+            current_tags_i = inspection_entry.tag_names("sel.first")
+
+            if "bold" in current_tags_i:
+                inspection_entry.tag_remove("bold", "sel.first", "sel.last")
+            else:
+                inspection_entry.tag_add("bold", "sel.first", "sel.last")
+                
+                
+            return;
+        except:
+            pass
+        
+        bold_font_p = font.Font(plan_entry, plan_entry.cget("font"))
+        bold_font_p.configure(weight="bold")
+        
+        #Configure a tag
+        plan_entry.tag_configure("bold", font=bold_font_p)
+        
+        try:
+            #Define current tags
+            current_tags_p = plan_entry.tag_names("sel.first")
+
+            if "bold" in current_tags_p:
+                plan_entry.tag_remove("bold", "sel.first", "sel.last")
+            else:
+                plan_entry.tag_add("bold", "sel.first", "sel.last")
+                
+                
+            return;
+        except:
+            pass
+        
+        
+    ##End of Bold Text Function
+        
+    ##Italic Text
+    def italic_text():
+        italic_font_c = font.Font(complain_entry, complain_entry.cget("font"))
+        italic_font_c.configure(slant="italic")
+        
+        #Configure a tag
+        complain_entry.tag_configure("italic", font=italic_font_c)
+        
+        
+        try:
+            
+            #Define current tags
+            current_tags_c = complain_entry.tag_names("sel.first")
+
+            if "italic" in current_tags_c:
+                complain_entry.tag_remove("italic", "sel.first", "sel.last")
+            else:
+                complain_entry.tag_add("italic", "sel.first", "sel.last")
+            
+            return;
+        except:
+            pass
+        
+        
+        
+        italic_font_i = font.Font(inspection_entry, inspection_entry.cget("font"))
+        italic_font_i.configure(slant="italic")
+        
+        #Configure a tag
+        inspection_entry.tag_configure("italic", font=italic_font_i)
+        
+        try:
+            #Define current tags
+            current_tags_i = inspection_entry.tag_names("sel.first")
+
+            if "italic" in current_tags_i:
+                inspection_entry.tag_remove("italic", "sel.first", "sel.last")
+            else:
+                inspection_entry.tag_add("italic", "sel.first", "sel.last")
+                
+            return;
+        except:
+            pass
+        
+        italic_font_p = font.Font(plan_entry, plan_entry.cget("font"))
+        italic_font_p.configure(slant="italic")
+        
+        #Configure a tag
+        plan_entry.tag_configure("italic", font=italic_font_p)
+        
+        try:
+            #Define current tags
+            current_tags_p = plan_entry.tag_names("sel.first")
+
+            if "italic" in current_tags_p:
+                plan_entry.tag_remove("italic", "sel.first", "sel.last")
+            else:
+                plan_entry.tag_add("italic", "sel.first", "sel.last")
+                
+            return;
+        except:
+            pass
+    ##End of Italic Text Function
+        
+    
+    ##BUTTONS FOR RT EDIT
+    toolbar = Frame(edit_patient)
+    toolbar.place(x=110,y=280);
+    
+    bold_button = Button(toolbar, text="B", command = bold_text, width=2)
+    bold_button.grid(row=0, column=0, padx=5)
+    italic_button = Button(toolbar, text="I", command = italic_text, width=2)
+    italic_button.grid(row=0, column=1, padx=5)
